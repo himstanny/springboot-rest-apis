@@ -25,7 +25,7 @@ u have to give basic auth in postman in authorization section
 ### To Login
 POST method
 No AUth required
-URI : http://localhost:8081/api/login
+URI : http://localhost:8081/login
 
 Request Body:
 {
