@@ -1,24 +1,25 @@
-Its a springboot maven project.
+# This is a springboot maven project.
 To build the project, u can import it in any ide and run as Spring boot app
 or using mvn spring-boot:run on cmd.
 
-#I have used mysql DB (U can check pom.xml for all the dependencies)
-#I have created mysql db service with db user as root/root.
-#port is 8081
+# I have used mysql DB (U can check pom.xml for all the dependencies)
+## I have created mysql db service with db user as root/root.
+# port is 8081
 
 
-Please refer application.properties for all the ports and configuration.
-Path: honeywell\src\main\resources\application.properties
+## Please refer application.properties for all the ports and configuration.
+Path: springboot-rest-apis/src/main/resources/application.properties
+https://github.com/himstanny/springboot-rest-apis/blob/master/src/main/resources/application.properties
 
 
 
 
-I have used in memory user with credentials (admin/admin)
+### I have used in memory user with credentials (admin/admin)
 So to access the apis like /employee and /employees?gender=<>&minage=<>&maxage=<>, 
 u have to give basic auth in postman in authorization section
 
 
-Sample requests:
+## Sample requests:
 
 
 ### To Login
@@ -29,12 +30,12 @@ URI : http://localhost:8081/api/login
 Request Body:
 {
 	    
-"username": "admin",
-"password": "admin"
+	"username": "admin",
+	"password": "admin"
        
-	} 
+} 
 
-####To create an employee
+## To create an employee
 
 POST method
 URI : http://localhost:8081/api/employee
@@ -48,7 +49,7 @@ Request Body:
  } 
       
       
-#####To get based on gender and age range
+### To get based on gender and age range
 
 GET method
 URI:http://localhost:8081/api/employees?gender=MALE&minage=18&maxage=40
@@ -57,13 +58,13 @@ Basic auth: admin/admin
 
 
 
+# Configurations
 
 
-
-#This is port of the application (http://localhost:8081/api/createEmployee)
+## This is port of the application (http://localhost:8081/api/createEmployee)
 server.port=8081
 
-## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties) 
+##Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties) 
 spring.datasource.url=jdbc:mysql://localhost:3306/honeywell
 spring.datasource.username=root
 spring.datasource.password=root
